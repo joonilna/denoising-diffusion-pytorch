@@ -78,9 +78,11 @@ def convert_image_to_fn(img_type, image):
 
 # normalization functions
 
+# for 0 ~ 1 images to -1 ~ 1
 def normalize_to_neg_one_to_one(img):
     return img * 2 - 1
 
+# for -1 ~ 1 images to 0 ~ 1
 def unnormalize_to_zero_to_one(t):
     return (t + 1) * 0.5
 
